@@ -1,9 +1,9 @@
 
 import React from "react";
-function UsuarioIndividual() {
+function UsuarioIndividual({specie}){
     return(
         <div>
-            <h2>USUARIO INDIVIDUAL</h2>
+            <p style={{color:"red"}}>{specie.nombre}</p>
         </div>
     )
 }

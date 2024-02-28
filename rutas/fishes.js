@@ -32,10 +32,7 @@ const ModelFishes = mongoose.model('species', schemaSpecies);
 // });
 module.exports = router;
 
-// Ejemplo
-// router.get('/ej', (req, res) => {
-//     res.end('Ruta ejemplo')
-// });
+// Llamada Añadir Especie
 router.post('/addspecie', async (req, res) => {
     const nuevaespecie = new ModelFishes({
         id: req.body.id,
@@ -68,6 +65,14 @@ router.post('/addspecie', async (req, res) => {
     } catch (err) {
         res.send('ERROR AL AGREGAR USUARIO: ', err)
     }
-
-
 });
+
+router.get('/getspecies', (req, res) => {
+    ModelFishes.find().then(function(docs,err){
+        if (!err){
+            res.send(docs)
+        }else{
+            res.send(err)
+        }
+    })
+})
