@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import '../css/mainstyles.css';
 import '../css/button-style.css';
 import '../css/gallery_1-styles.css';
+import GalleryIllustration from './GalleryIllustration';
 
 function GalleryLoader({ counterCard }) {
   
@@ -12,8 +13,9 @@ function GalleryLoader({ counterCard }) {
       {(() => {
         const options = [];
         for (let i = 1; i <= counterCard; i++) {
-          options.push(<img className="glow-img glow" style={{ margin: "20px", width: "140px", }}
-            src={(`./img/galleries/gallery_1/fishes_${i}.jpg`)}></img>);
+          // options.push(<img className="glow-img glow" style={{ margin: "20px", width: "140px", }}
+          //   src={(`./img/galleries/gallery_1/fishes_${i}.jpg`)}></img>);
+          options.push(<GalleryIllustration index={i}></GalleryIllustration>);
         }
         return (
 

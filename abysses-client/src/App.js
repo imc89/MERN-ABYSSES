@@ -4,6 +4,7 @@ import Gallery from './pages/Gallery';
 import Info from './pages/Info';
 import Index from './pages/Index';
 import Creator from './pages/Creator';
+import Card from './pages/Card';
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
           <Route path='/gallery' element={<Gallery/>}></Route>
           <Route path='/index' element={<Index/>}></Route>
           <Route path='/addspecie' element={<Creator/>}></Route>
+          <Route path='/card' element={<Card/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

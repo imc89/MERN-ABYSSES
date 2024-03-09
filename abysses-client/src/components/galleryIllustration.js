@@ -1,9 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function galleryIllustration() {
+function GalleryIllustration(data) {
   return (
-    <div>galleryIllustration</div>
+    <div>
+      <Link to="/card">
+        <img className="glow-img glow" style={{ margin: "20px", width: "140px", }} 
+        src={(`./img/galleries/gallery_1/fishes_${data.index}.jpg`)}/>
+      </Link>
+    </div>
   )
 }
 
-export default galleryIllustration
+export default GalleryIllustration

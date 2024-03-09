@@ -84,12 +84,8 @@ function Creator() {
     }
 
     return (
-        <div style={{ marginTop: '100px' }} align="center">
+        <div align="center">
             <br />   <br />
-            <label>ID</label>
-            <input type="number" value={id} min="1" max="10000" onChange={(e) => {
-                setId(e.target.value)
-            }} />
             <br />   <br />
             <label>Nombre</label>
             <input type="text" value={nombre} onChange={(e) => {
@@ -119,7 +115,7 @@ function Creator() {
             <div style={{ width: '300px' }}>
                 <Select
                     styles={customStyles}
-                    defaultValue={zoneList[0]}
+                    value={zoneList[0]}
                     options={zoneList}
                     onChange={(e) => {
                         setZone(e.value)
@@ -144,7 +140,7 @@ function Creator() {
             }} />
             <br />   <br />
             <label>IUCN</label>
-            <div style={{ width: '300px' }}>
+            <div style={{ width: '300px'}}>
                 <Select
                     styles={customStyles}
                     defaultValue={iucnList[0]}
@@ -161,6 +157,7 @@ function Creator() {
             }} />
             <br />   <br />
             <button onClick={addFish}>Guardar</button>
+            
         </div>
     )
 }

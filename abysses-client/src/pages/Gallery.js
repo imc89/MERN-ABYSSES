@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState, useMemo } from 'react'
 import { useLocation } from "react-router-dom";
-import UsuarioIndividual from '../components/UsuarioIndividual.js'
 import speciesCardsCounter from '../js/cardCounter.js'
 import GalleryLoader from '../components/GalleryLoader.js';
 
@@ -41,16 +40,6 @@ function Gallery(props) {
     setCounter(memoizedCounter);
   }, [memoizedCounter]);
   // 
-
-  const speciesList = dataspecies.map(specie => {
-    if (eliminarAcentos(specie.zone) === zone) {
-      return (
-        <div>
-          <UsuarioIndividual specie={specie} />
-        </div>
-      )
-    }
-  })
 
   const isZoneCorrect = dataspecies.some(specie => eliminarAcentos(specie.zone) === zone);
 
